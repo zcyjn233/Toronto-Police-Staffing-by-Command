@@ -1,0 +1,248 @@
+---
+title: "Toronto Police Staffing by Command"
+subtitle: "My subtitle if needed"
+author: 
+  - Wei Wang
+thanks: "Code and data are available at: LINK."
+date: today
+date-format: long
+abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+```
+
+
+# Introduction
+
+You can and should cross-reference sections and sub-sections. We use @citeR and @rohan.
+
+The remainder of this paper is structured as follows. @sec-data....
+
+
+
+# Data {#sec-data}
+
+Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+
+```{r}
+#| label: fig-bills
+#| fig-cap: Bills of penguins
+#| echo: false
+
+library(ggplot2)
+library(dplyr)
+
+# Load the data
+data <- read.csv("/Users/lucky/Downloads/starter_folder-main 2/data/TPSS.csv")
+
+# 1. Bar chart: Distribution of total staff counts by command
+command_staff_counts <- data %>%
+  group_by(Command) %>%
+  summarise(Total_Count = sum(Count_, na.rm = TRUE))
+
+ggplot(command_staff_counts, aes(x = reorder(Command, -Total_Count), y = Total_Count)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(title = "Distribution of Staff Counts by Command", x = "Command", y = "Total Staff Count")
+```
+
+Talk more about it.
+
+And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+
+```{r}
+#| label: fig-planes
+#| fig-cap: Relationship between wing length and width
+#| echo: false
+#| warning: false
+#| message: false
+
+# 2. Line chart: Staffing trends over the years
+staffing_trends <- data %>%
+  group_by(Year) %>%
+  summarise(Total_Count = sum(Count_, na.rm = TRUE))
+
+ggplot(staffing_trends, aes(x = Year, y = Total_Count)) +
+  geom_line(color = "blue", size = 1) +
+  geom_point(color = "red", size = 2) +
+  labs(title = "Staffing Trends Over the Years", x = "Year", y = "Total Staff Count")
+```
+
+Talk way more about it. 
+
+# 3. Line chart: Comparison of Approved Staffing vs Actual Staffing over the years
+approved_vs_actual <- data %>%
+  group_by(Year, Type_of_Metric) %>%
+  summarise(Total_Count = sum(Count_, na.rm = TRUE)) %>%
+  spread(Type_of_Metric, Total_Count)
+
+ggplot(approved_vs_actual, aes(x = Year)) +
+  geom_line(aes(y = `Approved Staffing`, color = "Approved Staffing"), size = 1) +
+  geom_line(aes(y = `Actual Staffing`, color = "Actual Staffing"), size = 1) +
+  labs(title = "Comparison of Approved Staffing vs Actual Staffing", x = "Year", y = "Staff Count") +
+  scale_color_manual(values = c("Approved Staffing" = "blue", "Actual Staffing" = "green"))
+
+
+# Model
+
+The goal of our modelling strategy is twofold. Firstly,...
+
+Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+
+## Model set-up
+
+Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+
+\begin{align} 
+y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
+\mu_i &= \alpha + \beta_i + \gamma_i\\
+\alpha &\sim \mbox{Normal}(0, 2.5) \\
+\beta &\sim \mbox{Normal}(0, 2.5) \\
+\gamma &\sim \mbox{Normal}(0, 2.5) \\
+\sigma &\sim \mbox{Exponential}(1)
+\end{align}
+
+We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+
+
+### Model justification
+
+We expect a positive relationship between the size of the wings and time spent aloft. In particular...
+
+We can use maths by including latex between dollar signs, for instance $\theta$.
+
+
+# Results
+
+Our results are summarized in @tbl-modelresults.
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
+
+
+first_model <-
+  readRDS(file = here::here("models/first_model.rds"))
+```
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-modelresults
+#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
+#| warning: false
+
+modelsummary::modelsummary(
+  list(
+    "First model" = first_model
+  ),
+  statistic = "mad",
+  fmt = 2
+)
+```
+
+
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+1. Staffing Distribution between Uniformed and Civilian Personnel
+The data indicates a clear division between uniformed officers and civilian personnel within the Toronto Police Services. In commands such as the Priority Response Command and the Specialized Operations Command, uniformed officers significantly outnumber civilians. For instance, in the Priority Response Command, there were 1,731 uniformed officers compared to only 234 civilian staff in 2019. This distribution underscores the fact that core policing functions, particularly those related to emergency response and active fieldwork, are predominantly handled by uniformed personnel.
+
+The Specialized Operations Command also shows a similar pattern, with 914 uniformed staff compared to minimal civilian involvement. The higher ratio of uniformed officers in these commands aligns with the nature of their responsibilities, which involve frontline policing and the management of critical situations. As a report from the Toronto Police Services Board explains, "uniformed officers are indispensable in ensuring rapid response and maintaining public safety during emergency situations" from @TPSBoard_2019. The significant presence of uniformed officers reflects the priority placed on active policing and immediate responsiveness.
+
+Civilian personnel, on the other hand, seem to be concentrated in more administrative and support roles. For example, in Centralized Service Charges, which deals with logistical and financial aspects of the police force, civilians make up the bulk of the staffing with 6 personnel, compared to no uniformed officers. This speaks to a common trend in policing worldwide, where civilians are increasingly employed to handle administrative tasks, freeing up uniformed officers for fieldwork and public-facing roles. As a report on policing efficiency mentions, "the civilianization of non-operational roles allows police departments to allocate their uniformed staff more effectively to critical, on-the-ground operations" from @Efficiency_Policing_2019.
+
+## Second discussion point
+A second notable point is the comparison between approved staffing levels and the actual number of staff in place. In several instances, the data shows discrepancies between the two. For example, while 1,731 uniformed officers were approved for the Priority Response Command in 2019, the actual number was slightly lower. Similarly, for civilian staffing in various commands, the actual figures often fell short of the approved numbers.
+
+These discrepancies raise important questions about the factors influencing staffing decisions. Budget constraints are likely a significant factor. As pointed out in a city finance report, "although approved staffing levels are determined based on operational needs, budgetary restrictions can prevent full implementation, resulting in gaps between projected and actual staffing" from @Toronto_City_Budget_2019. Economic pressures, particularly in the wake of financial austerity measures or fiscal tightening at the municipal level, often lead to under-staffing in both uniformed and civilian roles.
+
+Additionally, operational challenges such as recruitment bottlenecks and personnel turnover could contribute to these gaps. Police departments across North America have faced difficulties in attracting and retaining talent in recent years, with many forces citing the demanding nature of the job and increasing scrutiny on police practices as deterrents for potential recruits. This sentiment is echoed in a report from Public Safety Canada, which highlights that "the recruitment and retention of police personnel has become increasingly challenging due to public perception, operational demands, and shifting job expectations"from @PublicSafetyCanada_2020. The under-staffing evident in the TPS data may thus reflect broader trends impacting police departments not only in Toronto but across the country.
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional data details
+
+# Model details {#sec-model-details}
+
+## Posterior predictive check
+
+In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
+
+In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
+
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-ppcheckandposteriorvsprior
+#| layout-ncol: 2
+#| fig-cap: "Examining how the model fits, and is affected by, the data"
+#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
+
+pp_check(first_model) +
+  theme_classic() +
+  theme(legend.position = "bottom")
+
+posterior_vs_prior(first_model) +
+  theme_minimal() +
+  scale_color_brewer(palette = "Set1") +
+  theme(legend.position = "bottom") +
+  coord_flip()
+```
+
+## Diagnostics
+
+@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
+
+@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
+
+```{r}
+#| echo: false
+#| eval: true
+#| message: false
+#| warning: false
+#| label: fig-stanareyouokay
+#| fig-cap: "Checking the convergence of the MCMC algorithm"
+#| fig-subcap: ["Trace plot", "Rhat plot"]
+#| layout-ncol: 2
+
+plot(first_model, "trace")
+
+plot(first_model, "rhat")
+```
+
+
+
+\newpage
+
+
+# References
+
+
