@@ -24,7 +24,7 @@ bibliography: references.bib
 # 2023 disease outbreaks in Toronto healthcare facilities" in PDF format when
 # rendered.
 # Author: Wei Wang
-# Date: September 23, 2024
+# Date: today
 # Contact: won.wang@mail.utoronto.ca
 # Pre-requisites: Run the files "01-download_data.R" and "02-data_cleaning.R".
 ```
