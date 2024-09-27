@@ -1,0 +1,228 @@
+---
+title: "Balancing the Frontline: Analyzing Staffing Discrepancies and Resource Allocation within the Toronto Police Services (2019)"
+author:
+  - Wei Wang
+thanks: "A GitHub Repository containing all data, R code, and other files used in this investigation is located here: <https://github.com/zcyjn233/Toronto-Police-Staffing-by-Command>"
+date: 09-24-2024
+date-format: long
+abstract: "This analysis examines the staffing distribution within the Toronto Police Services (TPS) in 2019, focusing on the balance between uniformed officers and civilian personnel. It found that uniformed officers predominantly handle frontline and emergency response roles, while civilian staff are concentrated in administrative and support functions. Additionally, discrepancies were identified between approved staffing levels and actual numbers, likely due to budget constraints and recruitment challenges. These findings are important because they highlight the need for optimized resource allocation and improved recruitment strategies to ensure effective policing and public safety."
+format: pdf
+number-sections: true
+# The toc parameter used to create a table of contents was obtained from
+# Quarto documentation:
+# https://quarto.org/docs/reference/formats/pdf.html
+toc: true
+bibliography: references.bib
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#### Preamble ####
+
+# Purpose: Generates a paper titled "Long-term care homes were hit hardest by
+# 2023 disease outbreaks in Toronto healthcare facilities" in PDF format when
+# rendered.
+# Author: Wei Wang
+# Date: September 23, 2024
+# Contact: won.wang@mail.utoronto.ca
+# Pre-requisites: Run the files "01-download_data.R" and "02-data_cleaning.R".
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#### Loading Packages ####
+
+# install.packages("tidyverse")
+# install.packages("here")
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+```
+
+# Introduction {#sec-introduction}
+
+Policing is a critical public service that requires a well-structured and adequately staffed workforce to maintain law and order, ensure public safety, and respond to emergencies. Across jurisdictions, police departments face ongoing challenges in balancing the deployment of uniformed officers, who perform frontline duties, with civilian personnel, who support administrative and operational functions. Effective police staffing is essential to meet the demands of modern policing, especially in large cities like Toronto, where diverse operational needs must be addressed daily. However, ongoing issues such as budget constraints, recruitment bottlenecks, and high personnel turnover often affect the ability of police forces to maintain approved staffing levels. Understanding the distribution of uniformed and civilian personnel and identifying discrepancies between planned and actual staffing can help address these challenges.
+
+This paper focuses on the 2019 staffing structure of the Toronto Police Services (TPS), analyzing the division between uniformed officers and civilian personnel across different commands. By examining the data, the study highlights how the TPS prioritizes the deployment of uniformed officers in emergency response and field operations, while civilian staff are mainly employed in administrative roles. Additionally, the paper investigates the gaps between approved staffing levels and actual personnel, revealing critical issues such as budget limitations and difficulties in attracting and retaining staff. These challenges, which affect both uniformed and civilian roles, are not unique to Toronto and reflect broader trends in police departments across North America.
+
+The gap that this paper aims to address is the need for a clearer understanding of how police staffing is allocated and where shortfalls occur, particularly in relation to operational needs and budgetary restrictions. While much has been discussed about the importance of police staffing levels, there has been limited analysis of the specific distribution between uniformed and civilian staff and the factors contributing to discrepancies between approved and actual numbers. This analysis seeks to fill that gap by providing detailed insights into TPS staffing patterns and identifying the factors that may be contributing to these shortfalls.
+
+In this study, it was found that uniformed officers dominate critical frontline roles, such as in the Priority Response Command and Specialized Operations Command, while civilian personnel are concentrated in support functions. Furthermore, discrepancies between approved and actual staffing levels were found to stem from budget constraints and recruitment challenges. These findings are significant because they highlight the need for more effective resource allocation and recruitment strategies in police departments to ensure that staffing levels meet operational demands. The structure of the paper will first explore the staffing distribution within TPS, then examine the reasons behind staffing discrepancies, and finally, propose recommendations for optimizing resource allocation and improving recruitment processes.
+
+
+# Data {#sec-data}
+The dataset likely originates from annual reports or financial documents published by the Toronto Police Services or the City of Toronto, which track staffing allocations for 2019. The data includes the following key elements:
+
+Year: The dataset captures information from 2019, representing the staffing situation during that year.
+Type of Metric: The dataset includes both "approved staffing" and "actual staffing" numbers. Approved staffing represents the planned or authorized number of personnel, while actual staffing reflects the number of individuals actually employed.
+Command Units: Various police command units are listed, such as the "Priority Response Command" and "Specialized Operations Command," representing different functional divisions within the police force.
+Personnel Category: Personnel are categorized as either "uniform" (police officers) or "civilian" (non-police administrative or support staff).
+Staff Count: The dataset provides the actual number of staff in each category, represented in the "Count" column.
+
+
+## measurement {#sec-data-measurement}
+
+This data comes from opendatatoronto,according to the City of Toronto and administrative records,human resource management system, covering both uniformed officers (UNIFORM) and civilian employees (CIVILIAN). The data is regularly submitted by the police service and made publicly available to enhance transparency and inform the public about the allocation of policing resources.
+
+
+## Overview {#sec-data-overview}
+
+This dataset offers a clear view of the staffing distribution within the Toronto Police Services in 2019. One of the most evident trends is that uniformed officers make up the majority of staff in frontline and operational units, while civilian employees are more concentrated in administrative roles. For example:
+
+In the Priority Response Command, a division primarily responsible for frontline policing and emergency responses, there were 1,731 uniformed officers compared to only 234 civilian staff. 
+The Specialized Operations Command follows a similar trend, with 914 uniformed officers and a small presence of civilian staff.
+On the other hand, civilian personnel are concentrated in logistical and support roles. For example, in the Centralized Service Charges division, which deals with finance and logistics, all personnel are civilian, with an actual staffing number of 6. Similarly, the Toronto Police Services Board, a governing body overseeing the department, had 7.5 civilian staff, with no mention of uniformed officers in that unit.
+
+
+Using the `R` programming language [@citeR], the `janitor` [@citejanitor] and `tidyverse` [@citetidyverse] packages were used to simulate the dataset and generate tests for it. The `opendatatoronto` [@citeopendatatoronto] and `tidyverse` [@citetidyverse] packages were then applied in order to download the raw Toronto Public Health dataset. Next, the `tidyverse` package [@citetidyverse] was used to clean the raw dataset and test the cleaned dataset.
+
+## Results {#sec-data-results}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+#### Loading the Cleaned Dataset ####
+data <- read.csv(here::here("data", "raw_data" ,"tpss_raw_data.csv"))
+```
+
+After loading the dataset using the R programming language [@citeR] and the `here` package [@citehere], the `tidyverse` [@citetidyverse] package was used to generate graphs. In doing so, R code was adapted from @tellingstorieswithdata.
+
+\newpage
+
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: DOSCC
+#| fig-cap: "Number of the "
+#### First Graph ####
+
+# This code is based on knowledge from Alexander (2023).
+# 1. Bar chart: Distribution of total staff counts by command
+command_staff_counts <- data %>%
+  group_by(Command) %>%
+  summarise(Total_Count = sum(Count_, na.rm = TRUE))
+
+ggplot(command_staff_counts, aes(x = reorder(Command, -Total_Count), y = Total_Count)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(title = "Distribution of Staff Counts by Command", x = "Command", y = "Total Staff Count")
+
+```
+
+The chart illustrates the distribution of total staff counts across various departments (Commands). The Priority Response Command has the highest staff count, totaling 4,430 employees, followed by the Specialized Operations Command with 2,409 employees. Other departments, such as Centralized Service Charges and the Toronto Police Services Board, have significantly fewer staff, with 522 and 7.5 employees, respectively. This highlights the considerable differences in staffing levels between the departments.
+
+\newpage
+
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: STOY
+#| fig-cap: "Number of the "
+#### Second Graph ####
+
+# This code is based on knowledge from Alexander (2023).
+
+# 2. Line chart: Staffing trends over the years
+staffing_trends <- data %>%
+  group_by(Year) %>%
+  summarise(Total_Count = sum(Count_, na.rm = TRUE))
+
+ggplot(staffing_trends, aes(x = Year, y = Total_Count)) +
+  geom_line(color = "blue", size = 1) +
+  geom_point(color = "red", size = 2) +
+  theme_bw() +
+ labs(title = "Staffing Trends Over the Years", x = "Year", y = "Total Staff Count")
+
+```
+
+The chart depicts the staffing trends over the years, showing the total staff count for each year. In 2019 and 2020, the total staff count remained steady at 6,930.5. However, in 2021, there was a slight decrease, with the total staff count dropping to 6,845.5. This indicates a stable staffing level in the earlier years, followed by a minor reduction in the most recent year.
+
+\newpage
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: CASAS
+#| fig-cap: "Number of the "
+#### Third Graph ####
+
+# This code is based on knowledge from Alexander (2023).
+
+# 3. Line chart: Comparison of Approved Staffing vs Actual Staffing over the years
+approved_vs_actual <- data %>%
+  group_by(Year, Type_of_Metric) %>%
+  summarise(Total_Count = sum(Count_, na.rm = TRUE)) %>%
+  spread(Type_of_Metric, Total_Count)
+
+ggplot(approved_vs_actual, aes(x = Year)) +
+  geom_line(aes(y = `Approved Staffing`, color = "Approved Staffing"), size = 1) +
+  geom_line(aes(y = `Actual Staffing`, color = "Actual Staffing"), size = 1) +
+  labs(title = "Comparison of Approved Staffing vs Actual Staffing", x = "Year", y = "Staff Count") +
+  theme_bw() +
+  scale_color_manual(name = "Colour", values = c("Approved Staffing" = "blue", "Actual Staffing" = "green"))
+```
+
+The chart compares the approved staffing levels with the actual staffing levels over the years. In 2019, the approved staffing was 6,930.5, while the actual staffing was slightly lower at 6,888.5. In 2020, both the approved and actual staffing remained consistent, with 6,930.5 approved and 6,888.5 actual staff. However, in 2021, there was a decrease in both, with approved staffing at 6,845.5 and actual staffing at 6,803.0, showing a slight gap between the planned and actual staffing in each year.
+
+## First discussion point {#sec-first-point}
+
+Staffing Distribution between Uniformed and Civilian Personnel
+
+The dataset reveals a distinct division between uniformed officers and civilian personnel within the Toronto Police Services. In commands such as the Priority Response Command and the Specialized Operations Command, uniformed officers vastly outnumber civilian staff. For example, in the Priority Response Command, there were 1,731 uniformed officers compared to just 234 civilian personnel in 2019. This distribution emphasizes that core policing functions, especially those related to emergency response and operational duties, are primarily handled by uniformed staff. As stated in the Public Safety Canada report, "Uniformed personnel are primarily responsible for operational tasks that require direct interaction with the public or immediate response to incidents" from@kiedrowski2017civilianizationnotes.
+
+Similarly, the Specialized Operations Command follows this pattern, with 914 uniformed officers and minimal civilian involvement. This high proportion of uniformed officers aligns with the nature of their duties, which involve addressing critical situations and maintaining frontline readiness. "Emergency response units typically require a higher ratio of trained, uniformed officers due to the unpredictable and potentially dangerous nature of their work,"from@kiedrowski2017civilianizationnotes highlights the Public Safety Canada report.
+
+On the other hand, civilian personnel seem concentrated in administrative and support functions. For instance, in Centralized Service Charges, which oversees logistics and financial operations, civilians account for the entire workforce, with 6 personnel and no uniformed officers. This trend aligns with the broader shift in modern policing where non-operational roles are increasingly staffed by civilians, thereby allowing uniformed officers to focus on direct law enforcement activities. According to a report by the Defense Technical Information Center, "The integration of civilian personnel in support roles allows police forces to optimize their use of uniformed officers, focusing them on operational and public-facing duties" from@haynes2020starts.
+
+## Second discussion point
+
+Comparison between Approved Staffing Levels and Actual Numbers
+A key issue emerging from the data is the disparity between approved staffing levels and the actual number of personnel in place. In several commands, the actual staff numbers fall short of the approved levels. For example, although 1,731 uniformed officers were authorized for the Priority Response Command in 2019, the actual number was slightly lower. Similarly, civilian staffing levels often failed to meet the approved targets across multiple commands.
+
+These discrepancies suggest several underlying challenges, with budget constraints being a likely factor. "The allocation of personnel resources is often impacted by financial limitations, particularly in times of economic pressure,"from @kiedrowski2017civilianizationnotes the Public Safety Canada report. This shortfall is often a reflection of broader municipal budget constraints, where fiscal tightening or austerity measures force police departments to operate with fewer staff than planned.
+
+Moreover, operational challenges such as recruitment difficulties and turnover may contribute to this staffing gap. Police departments across North America have increasingly struggled to attract and retain personnel, with factors such as the demanding nature of police work and heightened public scrutiny impacting recruitment. As noted in a report by the Defense Technical Information Center, "Recruitment and retention challenges are exacerbated by the evolving expectations of police work and increased public accountability, which can deter potential recruits" from@haynes2020starts.
+
+The staffing discrepancies seen in Toronto Police Services mirror broader trends in policing across Canada, as similar issues of under-staffing have been reported in other major cities. The Public Safety Canada report highlights that "staffing shortages are not uncommon, with many police services struggling to balance public safety needs with financial and personnel constraints" from@kiedrowski2017civilianizationnotes. Thus, the gaps between approved and actual staffing in the TPS likely reflect broader, systemic issues affecting police services nationwide.
+
+
+## Summary
+
+By analyzing the 2019 staffing data from the Toronto Police Services, it is evident that the TPS personnel structure is aligned with the operational needs of law enforcement. Uniformed officers dominate frontline policing roles, while civilian staff are concentrated in support and administrative positions. The discrepancies between approved and actual staffing levels reveal the challenges faced by the police force, particularly in budget management and recruitment.
+
+To ensure the effectiveness and sustainability of staffing, police departments need to address several key issues:
+
+1.Resource Allocation Optimization: It is essential to ensure adequate police force levels in critical areas such as emergency response, while improving efficiency in civilian support roles to reduce the burden on frontline officers.
+2.Address Recruitment Challenges: Police departments should adopt more attractive recruitment policies and enhance incentives for uniformed officers, especially in light of the current social climate and growing expectations on the policing profession.
+
+\newpage
+
+\appendix
+
+# Appendix {#sec-appendix}
+
+## Dataset and Graph Sketches {#sec-appendix-sketches}
+
+Sketches depicting both the desired dataset and the graphs generated in this analysis are available in the GitHub Repository.
+
+## Data Cleaning {#sec-appendix-cleaning}
+
+The data cleaning process involved filtering out some of the columns from the raw dataset and renaming some of the data entries for clarity and simplicity.
+
+## Attribution Statement {#sec-appendix-attribution}
+
+"Contains information licensed under the Open Government Licence – Toronto" [@tphlicense].
+
+\newpage
+
+# References {#sec-references}
