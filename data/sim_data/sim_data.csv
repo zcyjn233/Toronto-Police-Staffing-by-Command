@@ -1,0 +1,101 @@
+"","X_id","Year","Type_of_Metric","Command","Category","Count_"
+"1",1,2021,"Approved Staffing","Centralized Service Charges","CIVILIAN",1782.8
+"2",2,2021,"Actual Staffing","Specialized Operations Command","UNIFORM",1254.4
+"3",3,2021,"Actual Staffing","Priority Response Command","UNIFORM",609.3
+"4",4,2020,"Approved Staffing","Priority Response Command","CIVILIAN",779.5
+"5",5,2021,"Approved Staffing","Specialized Operations Command","UNIFORM",325.1
+"6",6,2020,"Approved Staffing","Toronto Police Services Board","CIVILIAN",1725.8
+"7",7,2020,"Actual Staffing","Priority Response Command","CIVILIAN",1906.4
+"8",8,2020,"Approved Staffing","Specialized Operations Command","CIVILIAN",1129.5
+"9",9,2021,"Actual Staffing","Specialized Operations Command","UNIFORM",662.4
+"10",10,2019,"Actual Staffing","Priority Response Command","UNIFORM",1993.3
+"11",11,2020,"Actual Staffing","Centralized Service Charges","UNIFORM",473.5
+"12",12,2020,"Actual Staffing","Centralized Service Charges","UNIFORM",1227.3
+"13",13,2019,"Actual Staffing","Centralized Service Charges","CIVILIAN",220.8
+"14",14,2020,"Actual Staffing","Specialized Operations Command","UNIFORM",976.6
+"15",15,2021,"Actual Staffing","Centralized Service Charges","UNIFORM",203.4
+"16",16,2019,"Approved Staffing","Priority Response Command","UNIFORM",326.5
+"17",17,2021,"Actual Staffing","Priority Response Command","UNIFORM",569.6
+"18",18,2021,"Actual Staffing","Specialized Operations Command","CIVILIAN",1169.8
+"19",19,2019,"Actual Staffing","Priority Response Command","CIVILIAN",1464.8
+"20",20,2019,"Approved Staffing","Centralized Service Charges","UNIFORM",335.2
+"21",21,2019,"Actual Staffing","Toronto Police Services Board","CIVILIAN",1733.6
+"22",22,2019,"Actual Staffing","Priority Response Command","UNIFORM",1418.6
+"23",23,2021,"Actual Staffing","Priority Response Command","UNIFORM",1522
+"24",24,2020,"Approved Staffing","Centralized Service Charges","UNIFORM",298.4
+"25",25,2021,"Actual Staffing","Centralized Service Charges","CIVILIAN",719.3
+"26",26,2020,"Actual Staffing","Specialized Operations Command","UNIFORM",1348.3
+"27",27,2019,"Approved Staffing","Priority Response Command","UNIFORM",1050
+"28",28,2020,"Actual Staffing","Centralized Service Charges","UNIFORM",702.9
+"29",29,2021,"Approved Staffing","Specialized Operations Command","CIVILIAN",484.9
+"30",30,2020,"Actual Staffing","Priority Response Command","UNIFORM",121.1
+"31",31,2019,"Approved Staffing","Priority Response Command","UNIFORM",477.1
+"32",32,2021,"Approved Staffing","Priority Response Command","CIVILIAN",1780.7
+"33",33,2021,"Approved Staffing","Toronto Police Services Board","UNIFORM",1624.6
+"34",34,2019,"Approved Staffing","Toronto Police Services Board","UNIFORM",1496.3
+"35",35,2021,"Approved Staffing","Specialized Operations Command","UNIFORM",314
+"36",36,2020,"Approved Staffing","Priority Response Command","CIVILIAN",253.9
+"37",37,2019,"Approved Staffing","Centralized Service Charges","CIVILIAN",1949.6
+"38",38,2021,"Actual Staffing","Specialized Operations Command","UNIFORM",875.1
+"39",39,2019,"Actual Staffing","Centralized Service Charges","UNIFORM",930.7
+"40",40,2019,"Actual Staffing","Toronto Police Services Board","UNIFORM",334.8
+"41",41,2020,"Approved Staffing","Specialized Operations Command","CIVILIAN",1171.9
+"42",42,2021,"Actual Staffing","Toronto Police Services Board","UNIFORM",545.2
+"43",43,2021,"Approved Staffing","Specialized Operations Command","CIVILIAN",464
+"44",44,2019,"Approved Staffing","Toronto Police Services Board","UNIFORM",1384
+"45",45,2021,"Actual Staffing","Priority Response Command","CIVILIAN",569.3
+"46",46,2019,"Approved Staffing","Priority Response Command","UNIFORM",1621.7
+"47",47,2021,"Actual Staffing","Priority Response Command","UNIFORM",192.4
+"48",48,2020,"Actual Staffing","Priority Response Command","UNIFORM",1644.9
+"49",49,2019,"Actual Staffing","Toronto Police Services Board","CIVILIAN",857.7
+"50",50,2020,"Actual Staffing","Specialized Operations Command","CIVILIAN",1513
+"51",51,2019,"Approved Staffing","Priority Response Command","UNIFORM",1326.5
+"52",52,2019,"Approved Staffing","Specialized Operations Command","UNIFORM",891.8
+"53",53,2021,"Approved Staffing","Priority Response Command","CIVILIAN",1256.2
+"54",54,2019,"Actual Staffing","Toronto Police Services Board","UNIFORM",5.9
+"55",55,2020,"Actual Staffing","Toronto Police Services Board","UNIFORM",438.4
+"56",56,2019,"Actual Staffing","Priority Response Command","CIVILIAN",1411.2
+"57",57,2019,"Actual Staffing","Centralized Service Charges","UNIFORM",434.3
+"58",58,2021,"Approved Staffing","Specialized Operations Command","CIVILIAN",1628.8
+"59",59,2019,"Approved Staffing","Toronto Police Services Board","CIVILIAN",619
+"60",60,2020,"Approved Staffing","Priority Response Command","CIVILIAN",1377
+"61",61,2019,"Approved Staffing","Toronto Police Services Board","CIVILIAN",1865.7
+"62",62,2021,"Actual Staffing","Specialized Operations Command","CIVILIAN",236
+"63",63,2019,"Actual Staffing","Centralized Service Charges","CIVILIAN",259.8
+"64",64,2021,"Approved Staffing","Centralized Service Charges","CIVILIAN",1358.1
+"65",65,2020,"Approved Staffing","Priority Response Command","CIVILIAN",860.8
+"66",66,2021,"Actual Staffing","Centralized Service Charges","UNIFORM",1669.6
+"67",67,2020,"Actual Staffing","Priority Response Command","CIVILIAN",1943
+"68",68,2020,"Approved Staffing","Priority Response Command","UNIFORM",145.6
+"69",69,2021,"Approved Staffing","Priority Response Command","UNIFORM",922.3
+"70",70,2020,"Actual Staffing","Priority Response Command","UNIFORM",1404.7
+"71",71,2020,"Actual Staffing","Toronto Police Services Board","UNIFORM",178.4
+"72",72,2021,"Approved Staffing","Specialized Operations Command","UNIFORM",1985.9
+"73",73,2021,"Approved Staffing","Specialized Operations Command","UNIFORM",509.9
+"74",74,2019,"Actual Staffing","Specialized Operations Command","UNIFORM",103.8
+"75",75,2020,"Approved Staffing","Toronto Police Services Board","CIVILIAN",1374.2
+"76",76,2020,"Actual Staffing","Priority Response Command","CIVILIAN",1574.9
+"77",77,2019,"Actual Staffing","Specialized Operations Command","UNIFORM",710.4
+"78",78,2020,"Actual Staffing","Specialized Operations Command","UNIFORM",736.1
+"79",79,2019,"Actual Staffing","Priority Response Command","UNIFORM",577.8
+"80",80,2019,"Approved Staffing","Specialized Operations Command","UNIFORM",164.5
+"81",81,2020,"Actual Staffing","Priority Response Command","UNIFORM",734.1
+"82",82,2021,"Actual Staffing","Priority Response Command","UNIFORM",360.1
+"83",83,2021,"Actual Staffing","Specialized Operations Command","CIVILIAN",1074.4
+"84",84,2019,"Approved Staffing","Toronto Police Services Board","UNIFORM",1010.4
+"85",85,2020,"Actual Staffing","Priority Response Command","CIVILIAN",1890.3
+"86",86,2019,"Actual Staffing","Toronto Police Services Board","UNIFORM",685.9
+"87",87,2020,"Actual Staffing","Centralized Service Charges","CIVILIAN",932.1
+"88",88,2019,"Approved Staffing","Priority Response Command","CIVILIAN",169.6
+"89",89,2021,"Approved Staffing","Specialized Operations Command","CIVILIAN",1720.9
+"90",90,2021,"Actual Staffing","Priority Response Command","CIVILIAN",794.3
+"91",91,2020,"Actual Staffing","Centralized Service Charges","CIVILIAN",1473.1
+"92",92,2021,"Actual Staffing","Specialized Operations Command","UNIFORM",347.6
+"93",93,2019,"Actual Staffing","Specialized Operations Command","CIVILIAN",912.2
+"94",94,2020,"Approved Staffing","Specialized Operations Command","UNIFORM",1541.6
+"95",95,2020,"Actual Staffing","Toronto Police Services Board","UNIFORM",130
+"96",96,2021,"Approved Staffing","Priority Response Command","UNIFORM",1631.1
+"97",97,2020,"Actual Staffing","Priority Response Command","UNIFORM",605.8
+"98",98,2019,"Approved Staffing","Centralized Service Charges","UNIFORM",732.5
+"99",99,2021,"Approved Staffing","Priority Response Command","UNIFORM",627.7
+"100",100,2021,"Approved Staffing","Priority Response Command","UNIFORM",79.6

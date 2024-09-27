@@ -1,0 +1,182 @@
+X_id,Year,Type_of_Metric,Command,Category,Count_
+1,2019,Approved Staffing,Priority Response Command,UNIFORM,1731
+2,2019,Approved Staffing,Specialized Operations Command,CIVILIAN,234
+3,2019,Approved Staffing,Specialized Operations Command,UNIFORM,914
+4,2019,Approved Staffing,Toronto Police Services Board,CIVILIAN,7.5
+5,2019,Actual Staffing,Centralized Service Charges,CIVILIAN,6
+6,2019,Actual Staffing,Centralized Service Charges,UNIFORM,30
+7,2019,Actual Staffing,Chief of Police,CIVILIAN,65
+8,2019,Actual Staffing,Chief of Police,UNIFORM,32
+9,2019,Actual Staffing,Communities & Neighbourhoods Command,CIVILIAN,210
+10,2019,Actual Staffing,Communities & Neighbourhoods Command,UNIFORM,1906
+11,2019,Actual Staffing,Corporate Support Command,CIVILIAN,442
+12,2019,Actual Staffing,Corporate Support Command,UNIFORM,22
+13,2019,Actual Staffing,Human Resources Command,CIVILIAN,101
+14,2019,Actual Staffing,Human Resources Command,UNIFORM,184
+15,2019,Actual Staffing,Information Technology Command,CIVILIAN,161
+16,2019,Actual Staffing,Parking Enforcement Unit,CIVILIAN,395
+17,2019,Actual Staffing,Parking Enforcement Unit,UNIFORM,3
+18,2019,Actual Staffing,Priority Response Command,CIVILIAN,1068
+19,2019,Actual Staffing,Priority Response Command,UNIFORM,1663
+20,2019,Actual Staffing,Specialized Operations Command,CIVILIAN,230
+21,2019,Actual Staffing,Specialized Operations Command,UNIFORM,1007
+22,2019,Actual Staffing,Toronto Police Services Board,CIVILIAN,6.5
+23,2020,Approved Staffing,Centralized Service Charges,CIVILIAN,158
+24,2020,Approved Staffing,Centralized Service Charges,UNIFORM,61
+25,2020,Approved Staffing,Chief of Police,CIVILIAN,77
+26,2020,Approved Staffing,Chief of Police,UNIFORM,31
+27,2020,Approved Staffing,Communities & Neighbourhoods Command,CIVILIAN,217
+28,2020,Approved Staffing,Communities & Neighbourhoods Command,UNIFORM,1926
+29,2020,Approved Staffing,Corporate Support Command,CIVILIAN,490
+30,2020,Approved Staffing,Corporate Support Command,UNIFORM,40
+31,2020,Approved Staffing,Human Resources Command,CIVILIAN,134
+32,2020,Approved Staffing,Human Resources Command,UNIFORM,174
+33,2020,Approved Staffing,Information Technology Command,CIVILIAN,189
+34,2020,Approved Staffing,Parking Enforcement Unit,CIVILIAN,386
+35,2020,Approved Staffing,Parking Enforcement Unit,UNIFORM,8
+36,2020,Approved Staffing,Priority Response Command,CIVILIAN,1150
+37,2020,Approved Staffing,Priority Response Command,UNIFORM,1865
+38,2020,Approved Staffing,Specialized Operations Command,CIVILIAN,232
+39,2020,Approved Staffing,Specialized Operations Command,UNIFORM,941
+40,2020,Approved Staffing,Toronto Police Services Board,CIVILIAN,7.5
+41,2020,Actual Staffing,Centralized Service Charges,CIVILIAN,7
+42,2020,Actual Staffing,Centralized Service Charges,UNIFORM,36
+43,2020,Actual Staffing,Chief of Police,CIVILIAN,65
+44,2020,Actual Staffing,Chief of Police,UNIFORM,33
+45,2020,Actual Staffing,Communities & Neighbourhoods Command,CIVILIAN,209
+46,2020,Actual Staffing,Communities & Neighbourhoods Command,UNIFORM,2015
+47,2020,Actual Staffing,Corporate Support Command,CIVILIAN,431
+48,2020,Actual Staffing,Corporate Support Command,UNIFORM,16
+49,2020,Actual Staffing,Human Resources Command,CIVILIAN,174
+50,2020,Actual Staffing,Human Resources Command,UNIFORM,231
+51,2020,Actual Staffing,Information Technology Command,CIVILIAN,169
+52,2020,Actual Staffing,Information Technology Command,UNIFORM,2
+53,2020,Actual Staffing,Parking Enforcement Unit,CIVILIAN,372
+54,2020,Actual Staffing,Parking Enforcement Unit,UNIFORM,1
+55,2020,Actual Staffing,Priority Response Command,CIVILIAN,1070
+56,2020,Actual Staffing,Priority Response Command,UNIFORM,1661
+57,2020,Actual Staffing,Specialized Operations Command,CIVILIAN,237
+58,2020,Actual Staffing,Specialized Operations Command,UNIFORM,1038
+59,2020,Actual Staffing,Toronto Police Services Board,CIVILIAN,7.5
+60,2016,Approved Staffing,Centralized Service Charges,CIVILIAN,1
+61,2016,Approved Staffing,Centralized Service Charges,UNIFORM,1
+62,2016,Approved Staffing,Chief of Police,CIVILIAN,29
+63,2016,Approved Staffing,Chief of Police,UNIFORM,24
+64,2016,Approved Staffing,Communities & Neighbourhoods Command,CIVILIAN,149
+65,2016,Approved Staffing,Communities & Neighbourhoods Command,UNIFORM,2368
+66,2016,Approved Staffing,Corporate Support Command,CIVILIAN,543
+67,2016,Approved Staffing,Corporate Support Command,UNIFORM,46
+68,2016,Approved Staffing,Human Resources Command,CIVILIAN,125
+69,2016,Approved Staffing,Human Resources Command,UNIFORM,203
+70,2016,Approved Staffing,Information Technology Command,CIVILIAN,188
+71,2016,Approved Staffing,Parking Enforcement Unit,CIVILIAN,386
+72,2016,Approved Staffing,Parking Enforcement Unit,UNIFORM,8
+73,2016,Approved Staffing,Priority Response Command,CIVILIAN,1149
+74,2016,Approved Staffing,Priority Response Command,UNIFORM,1977
+75,2016,Approved Staffing,Specialized Operations Command,CIVILIAN,243
+76,2016,Approved Staffing,Specialized Operations Command,UNIFORM,835
+77,2016,Approved Staffing,Toronto Police Services Board,CIVILIAN,6
+78,2016,Actual Staffing,Centralized Service Charges,CIVILIAN,13
+79,2016,Actual Staffing,Centralized Service Charges,UNIFORM,106
+80,2016,Actual Staffing,Chief of Police,CIVILIAN,32
+81,2016,Actual Staffing,Chief of Police,UNIFORM,41
+82,2016,Actual Staffing,Communities & Neighbourhoods Command,CIVILIAN,125
+83,2016,Actual Staffing,Communities & Neighbourhoods Command,UNIFORM,2157
+84,2016,Actual Staffing,Corporate Support Command,CIVILIAN,471
+85,2016,Actual Staffing,Corporate Support Command,UNIFORM,40
+86,2016,Actual Staffing,Human Resources Command,CIVILIAN,103
+87,2016,Actual Staffing,Human Resources Command,UNIFORM,167
+88,2016,Actual Staffing,Information Technology Command,CIVILIAN,170
+89,2016,Actual Staffing,Parking Enforcement Unit,CIVILIAN,361
+90,2016,Actual Staffing,Parking Enforcement Unit,UNIFORM,6
+91,2016,Actual Staffing,Priority Response Command,CIVILIAN,1053
+92,2016,Actual Staffing,Priority Response Command,UNIFORM,1821
+93,2016,Actual Staffing,Specialized Operations Command,CIVILIAN,234
+94,2016,Actual Staffing,Specialized Operations Command,UNIFORM,858
+95,2016,Actual Staffing,Toronto Police Services Board,CIVILIAN,5
+96,2017,Approved Staffing,Centralized Service Charges,CIVILIAN,17
+97,2017,Approved Staffing,Centralized Service Charges,UNIFORM,-4
+98,2017,Approved Staffing,Chief of Police,CIVILIAN,32
+99,2017,Approved Staffing,Chief of Police,UNIFORM,35
+100,2017,Approved Staffing,Communities & Neighbourhoods Command,CIVILIAN,148
+101,2017,Approved Staffing,Communities & Neighbourhoods Command,UNIFORM,2361
+102,2017,Approved Staffing,Corporate Support Command,CIVILIAN,537
+103,2017,Approved Staffing,Corporate Support Command,UNIFORM,45
+104,2017,Approved Staffing,Human Resources Command,CIVILIAN,127
+105,2017,Approved Staffing,Human Resources Command,UNIFORM,199
+106,2017,Approved Staffing,Information Technology Command,CIVILIAN,188
+107,2017,Approved Staffing,Parking Enforcement Unit,CIVILIAN,386
+108,2017,Approved Staffing,Parking Enforcement Unit,UNIFORM,8
+109,2017,Approved Staffing,Priority Response Command,CIVILIAN,1145
+110,2017,Approved Staffing,Priority Response Command,UNIFORM,1975
+111,2017,Approved Staffing,Specialized Operations Command,CIVILIAN,247
+112,2017,Approved Staffing,Specialized Operations Command,UNIFORM,829
+113,2017,Approved Staffing,Toronto Police Services Board,CIVILIAN,6
+114,2017,Actual Staffing,Centralized Service Charges,CIVILIAN,10
+115,2017,Actual Staffing,Centralized Service Charges,UNIFORM,28
+116,2017,Actual Staffing,Chief of Police,CIVILIAN,33
+117,2017,Actual Staffing,Chief of Police,UNIFORM,44
+118,2017,Actual Staffing,Communities & Neighbourhoods Command,CIVILIAN,118
+119,2017,Actual Staffing,Communities & Neighbourhoods Command,UNIFORM,1972
+120,2017,Actual Staffing,Corporate Support Command,CIVILIAN,448
+121,2017,Actual Staffing,Corporate Support Command,UNIFORM,39
+122,2017,Actual Staffing,Human Resources Command,CIVILIAN,85
+123,2017,Actual Staffing,Human Resources Command,UNIFORM,183
+124,2017,Actual Staffing,Information Technology Command,CIVILIAN,163
+125,2017,Actual Staffing,Parking Enforcement Unit,CIVILIAN,347
+126,2017,Actual Staffing,Parking Enforcement Unit,UNIFORM,5
+127,2017,Actual Staffing,Priority Response Command,CIVILIAN,990
+128,2017,Actual Staffing,Priority Response Command,UNIFORM,1784
+129,2017,Actual Staffing,Specialized Operations Command,CIVILIAN,232
+130,2017,Actual Staffing,Specialized Operations Command,UNIFORM,920
+131,2017,Actual Staffing,Toronto Police Services Board,CIVILIAN,5
+132,2018,Approved Staffing,Centralized Service Charges,CIVILIAN,-66
+133,2018,Approved Staffing,Centralized Service Charges,UNIFORM,31
+134,2018,Approved Staffing,Chief of Police,CIVILIAN,31
+135,2018,Approved Staffing,Chief of Police,UNIFORM,50
+136,2018,Approved Staffing,Communities & Neighbourhoods Command,CIVILIAN,117
+137,2018,Approved Staffing,Communities & Neighbourhoods Command,UNIFORM,2042
+138,2018,Approved Staffing,Corporate Support Command,CIVILIAN,471
+139,2018,Approved Staffing,Corporate Support Command,UNIFORM,42
+140,2018,Approved Staffing,Human Resources Command,CIVILIAN,127
+141,2018,Approved Staffing,Human Resources Command,UNIFORM,167
+142,2018,Approved Staffing,Information Technology Command,CIVILIAN,172
+143,2018,Approved Staffing,Parking Enforcement Unit,CIVILIAN,386
+144,2018,Approved Staffing,Parking Enforcement Unit,UNIFORM,8
+145,2018,Approved Staffing,Priority Response Command,CIVILIAN,1023
+146,2018,Approved Staffing,Priority Response Command,UNIFORM,1861
+147,2018,Approved Staffing,Specialized Operations Command,CIVILIAN,236
+148,2018,Approved Staffing,Specialized Operations Command,UNIFORM,918
+149,2018,Approved Staffing,Toronto Police Services Board,CIVILIAN,6
+150,2018,Actual Staffing,Centralized Service Charges,CIVILIAN,11
+151,2018,Actual Staffing,Centralized Service Charges,UNIFORM,23
+152,2018,Actual Staffing,Chief of Police,CIVILIAN,36
+153,2018,Actual Staffing,Chief of Police,UNIFORM,31
+154,2018,Actual Staffing,Communities & Neighbourhoods Command,CIVILIAN,126
+155,2018,Actual Staffing,Communities & Neighbourhoods Command,UNIFORM,1870
+156,2018,Actual Staffing,Corporate Support Command,CIVILIAN,440
+157,2018,Actual Staffing,Corporate Support Command,UNIFORM,39
+158,2018,Actual Staffing,Human Resources Command,CIVILIAN,90
+159,2018,Actual Staffing,Human Resources Command,UNIFORM,173
+160,2018,Actual Staffing,Information Technology Command,CIVILIAN,155
+161,2018,Actual Staffing,Parking Enforcement Unit,CIVILIAN,376
+162,2018,Actual Staffing,Parking Enforcement Unit,UNIFORM,5
+163,2018,Actual Staffing,Priority Response Command,CIVILIAN,1030
+164,2018,Actual Staffing,Priority Response Command,UNIFORM,1676
+165,2018,Actual Staffing,Specialized Operations Command,CIVILIAN,219
+166,2018,Actual Staffing,Specialized Operations Command,UNIFORM,911
+167,2018,Actual Staffing,Toronto Police Services Board,CIVILIAN,7
+168,2019,Approved Staffing,Centralized Service Charges,CIVILIAN,245
+169,2019,Approved Staffing,Centralized Service Charges,UNIFORM,24
+170,2019,Approved Staffing,Chief of Police,CIVILIAN,75
+171,2019,Approved Staffing,Chief of Police,UNIFORM,36
+172,2019,Approved Staffing,Communities & Neighbourhoods Command,CIVILIAN,134
+173,2019,Approved Staffing,Communities & Neighbourhoods Command,UNIFORM,1931
+174,2019,Approved Staffing,Corporate Support Command,CIVILIAN,492
+175,2019,Approved Staffing,Corporate Support Command,UNIFORM,36
+176,2019,Approved Staffing,Human Resources Command,CIVILIAN,151
+177,2019,Approved Staffing,Human Resources Command,UNIFORM,167
+178,2019,Approved Staffing,Information Technology Command,CIVILIAN,193
+179,2019,Approved Staffing,Parking Enforcement Unit,CIVILIAN,386
+180,2019,Approved Staffing,Parking Enforcement Unit,UNIFORM,8
+181,2019,Approved Staffing,Priority Response Command,CIVILIAN,1113
