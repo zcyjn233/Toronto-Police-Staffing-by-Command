@@ -19,4 +19,3 @@ The repo is structured as:
 
 Aspects of the code were written with the help of the auto-complete tool,Chatgpt. The abstract and introduction were written with the help of Chatgpt and the entire chat history is available in inputs/llms/usage.txt.
 
-## Some checks

@@ -3,7 +3,7 @@ title: "Balancing the Frontline: Analyzing Staffing Discrepancies and Resource A
 author:
   - Wei Wang
 thanks: "A GitHub Repository containing all data, R code, and other files used in this investigation is located here: <https://github.com/zcyjn233/Toronto-Police-Staffing-by-Command>"
-date: 09-24-2024
+date: today
 date-format: long
 abstract: "This analysis examines the staffing distribution within the Toronto Police Services (TPS) in 2019, focusing on the balance between uniformed officers and civilian personnel. It found that uniformed officers predominantly handle frontline and emergency response roles, while civilian staff are concentrated in administrative and support functions. Additionally, discrepancies were identified between approved staffing levels and actual numbers, likely due to budget constraints and recruitment challenges. These findings are important because they highlight the need for optimized resource allocation and improved recruitment strategies to ensure effective policing and public safety."
 format: pdf
