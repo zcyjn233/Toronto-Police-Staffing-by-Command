@@ -99,7 +99,7 @@ After loading the dataset using the R programming language [@citeR] and the `her
 #| echo: false
 #| warning: false
 #| label: DOSCC
-#| fig-cap: "Number of the "
+#| fig-cap: "Bar chart depicting the total staff count for each command. The commands are arranged in descending order of staff count, with each bar representing the total number of staff per command. The bars are colored in sky blue, and the x-axis labels are rotated for clarity."
 #### First Graph ####
 
 # This code is based on knowledge from Alexander (2023).
@@ -126,7 +126,7 @@ The chart illustrates the distribution of total staff counts across various depa
 #| echo: false
 #| warning: false
 #| label: STOY
-#| fig-cap: "Number of the "
+#| fig-cap: "Line graph illustrating staffing trends over the years. The blue line shows the total staff count for each year, with red points marking the specific values. The x-axis represents the year, while the y-axis shows the total number of staff"
 #### Second Graph ####
 
 # This code is based on knowledge from Alexander (2023).
@@ -153,7 +153,7 @@ The chart depicts the staffing trends over the years, showing the total staff co
 #| echo: false
 #| warning: false
 #| label: CASAS
-#| fig-cap: "Number of the "
+#| fig-cap: "Line graph comparing approved staffing levels with actual staffing levels over the years. The blue line represents approved staffing, and the green line represents actual staffing. The x-axis shows the years, and the y-axis indicates the staff count"
 #### Third Graph ####
 
 # This code is based on knowledge from Alexander (2023).
@@ -178,22 +178,22 @@ The chart compares the approved staffing levels with the actual staffing levels 
 
 Staffing Distribution between Uniformed and Civilian Personnel
 
-The dataset reveals a distinct division between uniformed officers and civilian personnel within the Toronto Police Services. In commands such as the Priority Response Command and the Specialized Operations Command, uniformed officers vastly outnumber civilian staff. For example, in the Priority Response Command, there were 1,731 uniformed officers compared to just 234 civilian personnel in 2019. This distribution emphasizes that core policing functions, especially those related to emergency response and operational duties, are primarily handled by uniformed staff. As stated in the Public Safety Canada report, "Uniformed personnel are primarily responsible for operational tasks that require direct interaction with the public or immediate response to incidents" from@kiedrowski2017civilianizationnotes.
+The dataset reveals a distinct division between uniformed officers and civilian personnel within the Toronto Police Services. In commands such as the Priority Response Command and the Specialized Operations Command, uniformed officers vastly outnumber civilian staff. For example, in the Priority Response Command, there were 1,731 uniformed officers compared to just 234 civilian personnel in 2019. This distribution emphasizes that core policing functions, especially those related to emergency response and operational duties, are primarily handled by uniformed staff. As stated in the Public Safety Canada report, "Uniformed personnel are primarily responsible for operational tasks that require direct interaction with the public or immediate response to incidents" from @kiedrowski2017civilianization.
 
-Similarly, the Specialized Operations Command follows this pattern, with 914 uniformed officers and minimal civilian involvement. This high proportion of uniformed officers aligns with the nature of their duties, which involve addressing critical situations and maintaining frontline readiness. "Emergency response units typically require a higher ratio of trained, uniformed officers due to the unpredictable and potentially dangerous nature of their work,"from@kiedrowski2017civilianizationnotes highlights the Public Safety Canada report.
+Similarly, the Specialized Operations Command follows this pattern, with 914 uniformed officers and minimal civilian involvement. This high proportion of uniformed officers aligns with the nature of their duties, which involve addressing critical situations and maintaining frontline readiness. "Emergency response units typically require a higher ratio of trained, uniformed officers due to the unpredictable and potentially dangerous nature of their work,"from @kiedrowski2017civilianization highlights the Public Safety Canada report.
 
-On the other hand, civilian personnel seem concentrated in administrative and support functions. For instance, in Centralized Service Charges, which oversees logistics and financial operations, civilians account for the entire workforce, with 6 personnel and no uniformed officers. This trend aligns with the broader shift in modern policing where non-operational roles are increasingly staffed by civilians, thereby allowing uniformed officers to focus on direct law enforcement activities. According to a report by the Defense Technical Information Center, "The integration of civilian personnel in support roles allows police forces to optimize their use of uniformed officers, focusing them on operational and public-facing duties" from@haynes2020starts.
+On the other hand, civilian personnel seem concentrated in administrative and support functions. For instance, in Centralized Service Charges, which oversees logistics and financial operations, civilians account for the entire workforce, with 6 personnel and no uniformed officers. This trend aligns with the broader shift in modern policing where non-operational roles are increasingly staffed by civilians, thereby allowing uniformed officers to focus on direct law enforcement activities. According to a report by the Defense Technical Information Center, "The integration of civilian personnel in support roles allows police forces to optimize their use of uniformed officers, focusing them on operational and public-facing duties" from @haynes2020starts.
 
 ## Second discussion point
 
 Comparison between Approved Staffing Levels and Actual Numbers
 A key issue emerging from the data is the disparity between approved staffing levels and the actual number of personnel in place. In several commands, the actual staff numbers fall short of the approved levels. For example, although 1,731 uniformed officers were authorized for the Priority Response Command in 2019, the actual number was slightly lower. Similarly, civilian staffing levels often failed to meet the approved targets across multiple commands.
 
-These discrepancies suggest several underlying challenges, with budget constraints being a likely factor. "The allocation of personnel resources is often impacted by financial limitations, particularly in times of economic pressure,"from @kiedrowski2017civilianizationnotes the Public Safety Canada report. This shortfall is often a reflection of broader municipal budget constraints, where fiscal tightening or austerity measures force police departments to operate with fewer staff than planned.
+These discrepancies suggest several underlying challenges, with budget constraints being a likely factor. "The allocation of personnel resources is often impacted by financial limitations, particularly in times of economic pressure,"from @kiedrowski2017civilianization notes the Public Safety Canada report. This shortfall is often a reflection of broader municipal budget constraints, where fiscal tightening or austerity measures force police departments to operate with fewer staff than planned.
 
-Moreover, operational challenges such as recruitment difficulties and turnover may contribute to this staffing gap. Police departments across North America have increasingly struggled to attract and retain personnel, with factors such as the demanding nature of police work and heightened public scrutiny impacting recruitment. As noted in a report by the Defense Technical Information Center, "Recruitment and retention challenges are exacerbated by the evolving expectations of police work and increased public accountability, which can deter potential recruits" from@haynes2020starts.
+Moreover, operational challenges such as recruitment difficulties and turnover may contribute to this staffing gap. Police departments across North America have increasingly struggled to attract and retain personnel, with factors such as the demanding nature of police work and heightened public scrutiny impacting recruitment. As noted in a report by the Defense Technical Information Center, "Recruitment and retention challenges are exacerbated by the evolving expectations of police work and increased public accountability, which can deter potential recruits" from @haynes2020starts.
 
-The staffing discrepancies seen in Toronto Police Services mirror broader trends in policing across Canada, as similar issues of under-staffing have been reported in other major cities. The Public Safety Canada report highlights that "staffing shortages are not uncommon, with many police services struggling to balance public safety needs with financial and personnel constraints" from@kiedrowski2017civilianizationnotes. Thus, the gaps between approved and actual staffing in the TPS likely reflect broader, systemic issues affecting police services nationwide.
+The staffing discrepancies seen in Toronto Police Services mirror broader trends in policing across Canada, as similar issues of under-staffing have been reported in other major cities. The Public Safety Canada report highlights that "staffing shortages are not uncommon, with many police services struggling to balance public safety needs with financial and personnel constraints" from @kiedrowski2017civilianization. Thus, the gaps between approved and actual staffing in the TPS likely reflect broader, systemic issues affecting police services nationwide.
 
 
 ## Summary
