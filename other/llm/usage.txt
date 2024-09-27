@@ -6,7 +6,7 @@ The chart illustrates the distribution of total staff counts across various depa
  
 staffing_trends <- data %>% group_by(Year) %>% summarise(Total_Count = sum(Count_, na.rm = TRUE)) ggplot(staffing_trends, aes(x = Year, y = Total_Count)) + geom_line(color = "blue", size = 1) + geom_point(color = "red", size = 2) + labs(title = "Staffing Trends Over the Years", x = "Year", y = "Total Staff Count")
  
-ChatGPT 说：
+ChatGPT ：
 ChatGPT
 Staffing Trends Over the Years
  
@@ -392,3 +392,33 @@ By rewriting the discussions this way, I’ve integrated quotes from both the Pu
 ChatGPT ：
 ChatGPT
 According to the [City of Toronto's Open Data Portal](City of Toronto's Open Data/tor,City of Toronto andadministrative records,human resource management system, covering both uniformed officers (UNIFORM) and civilian employees (CIVILIAN). The data is regularly submitted by the police service and made publicly available to enhance transparency and inform the public about the allocation of policing resources.
+
+
+Here are the explanations for conducting the three tests in R, using the data you provided:
+
+Test if all numeric values are greater than 0:
+
+We want to check if all values in the Count_ column are positive numbers.
+r
+复制代码
+all(data$Count_ > 0)
+This command will return a boolean value TRUE if all values are greater than 0, otherwise FALSE.
+
+Test if Category only contains 'UNIFORM' and 'CIVILIAN':
+
+We can use the unique() function to find all unique values in the Category column, and check if these values are only "UNIFORM" and "CIVILIAN."
+r
+复制代码
+unique(data$Category)
+all(unique(data$Category) %in% c("UNIFORM", "CIVILIAN"))
+The first line will show all the distinct values in the Category column. The second line will check if these values only contain "UNIFORM" and "CIVILIAN."
+
+Test if Type_of_Metric contains the word "Staffing":
+
+We can use the grepl() function to verify if every entry in the Type_of_Metric column contains the word "Staffing."
+r
+复制代码
+all(grepl("Staffing", data$Type_of_Metric))
+This command will return TRUE if all entries in the Type_of_Metric column contain the word "Staffing," otherwise FALSE.
+
+These are the three different tests you can run on your data in R. Let me know if you need further clarification!
